@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню — Bean &amp; Leaf</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <a href="index.html" class="logo">☕ Bean &amp; Leaf</a>
+        <nav class="nav">
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="menu.html" class="nav__link nav__link--active">Меню</a>
+            <a href="builder.html" class="nav__link">Собрать напиток</a>
+        </nav>
+    </header>
+
+    <!-- ЗАГОЛОВОК -->
+    <section class="page-head">
+        <h1 class="page-head__title">Наше меню</h1>
+        <p class="page-head__subtitle">Нажми на категорию, чтобы раскрыть, и на фото — чтобы увеличить</p>
+    </section>
+
+    <!-- АККОРДЕОН -->
+    <section class="section">
+        <div class="accordion" id="accordion">
+
+            <div class="accordion__item">
+                <button class="accordion__header" type="button">
+                    <span>☕ Кофе</span>
+                    <span class="accordion__icon">+</span>
+                </button>
+                <div class="accordion__body">
+                    <div class="menu-grid">
+                        <div class="menu-card" data-img="espresso" data-name="Эспрессо">
+                            <div class="menu-card__img">☕</div>
+                            <h3>Эспрессо</h3>
+                            <p>120 ₽</p>
+                        </div>
+                        <div class="menu-card" data-img="latte" data-name="Латте">
+                            <div class="menu-card__img">🥛</div>
+                            <h3>Латте</h3>
+                            <p>190 ₽</p>
+                        </div>
+                        <div class="menu-card" data-img="cappuccino" data-name="Капучино">
+                            <div class="menu-card__img">🧋</div>
+                            <h3>Капучино</h3>
+                            <p>180 ₽</p>
+                        </div>
+                        <div class="menu-card" data-img="mocha" data-name="Мокко">
+                            <div class="menu-card__img">🍫</div>
+                            <h3>Мокко</h3>
+                            <p>210 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion__item">
+                <button class="accordion__header" type="button">
+                    <span>🍵 Чай и матча</span>
+                    <span class="accordion__icon">+</span>
+                </button>
+                <div class="accordion__body">
+                    <div class="menu-grid">
+                        <div class="menu-card" data-img="matcha" data-name="Матча-латте">
+                            <div class="menu-card__img">🍵</div>
+                            <h3>Матча-латте</h3>
+                            <p>220 ₽</p>
+                        </div>
+                        <div class="menu-card" data-img="green-tea" data-name="Зелёный чай">
+                            <div class="menu-card__img">🌿</div>
+                            <h3>Зелёный чай</h3>
+                            <p>150 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion__item">
+                <button class="accordion__header" type="button">
+                    <span>🍰 Десерты</span>
+                    <span class="accordion__icon">+</span>
+                </button>
+                <div class="accordion__body">
+                    <div class="menu-grid">
+                        <div class="menu-card" data-img="cheesecake" data-name="Чизкейк">
+                            <div class="menu-card__img">🍰</div>
+                            <h3>Чизкейк</h3>
+                            <p>250 ₽</p>
+                        </div>
+                        <div class="menu-card" data-img="croissant" data-name="Круассан">
+                            <div class="menu-card__img">🥐</div>
+                            <h3>Круассан</h3>
+                            <p>140 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Предыдущее">&#10094;</button>
+        <div class="lightbox__content">
+            <div class="lightbox__img" id="lightboxImg">☕</div>
+            <p class="lightbox__caption" id="lightboxCaption">Эспрессо</p>
+        </div>
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Следующее">&#10095;</button>
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <p>© 2026 Bean &amp; Leaf. Учебный проект.</p>
+    </footer>
+
+    <!-- СКРИПТЫ -->
+    <script src="js/main.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>
