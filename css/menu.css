@@ -1,0 +1,140 @@
+/* ===== ЗАГОЛОВОК СТРАНИЦЫ ===== */
+.page-head {
+    background: linear-gradient(135deg, var(--brown) 0%, #2b1d14 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 64px 32px;
+}
+
+.page-head__title {
+    font-size: clamp(28px, 5vw, 48px);
+    margin-bottom: 8px;
+}
+
+.page-head__subtitle { opacity: 0.85; }
+
+/* ===== АККОРДЕОН ===== */
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.accordion__item {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.accordion__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--brown);
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+.accordion__header:hover { background: var(--cream); }
+
+.accordion__icon {
+    font-size: 22px;
+    transition: transform 0.3s;
+}
+
+.accordion__item.is-open .accordion__icon { transform: rotate(45deg); }
+
+.accordion__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.accordion__item.is-open .accordion__body { max-height: 800px; }
+
+/* ===== СЕТКА МЕНЮ ===== */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 16px 24px 24px;
+}
+
+.menu-card {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    background: var(--white);
+    box-shadow: 0 10px 24px rgba(74, 44, 26, 0.18);
+}
+
+.menu-card__img { font-size: 40px; margin-bottom: 8px; }
+.menu-card h3 { font-size: 15px; color: var(--brown); margin-bottom: 4px; }
+.menu-card p { font-size: 14px; color: var(--accent); font-weight: 600; }
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 12, 6, 0.85);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.lightbox.is-open { opacity: 1; visibility: visible; }
+
+.lightbox__content {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+    max-width: 90vw;
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
+
+.lightbox.is-open .lightbox__content { transform: scale(1); }
+
+.lightbox__img { font-size: 120px; margin-bottom: 16px; }
+.lightbox__caption { font-size: 20px; font-weight: 600; color: var(--brown); }
+
+.lightbox__close,
+.lightbox__nav {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.25s, transform 0.2s;
+}
+
+.lightbox__close { top: 20px; right: 20px; width: 44px; height: 44px; font-size: 28px; }
+.lightbox__nav { width: 52px; height: 52px; font-size: 22px; }
+.lightbox__nav--prev { left: 20px; }
+.lightbox__nav--next { right: 20px; }
+
+.lightbox__close:hover,
+.lightbox__nav:hover { background: var(--accent); transform: scale(1.1); }
