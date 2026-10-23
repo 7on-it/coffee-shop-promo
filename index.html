@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean & Leaf — кофейня</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <!-- ШАПКА -->
+    <header class="header">
+        <a href="index.html" class="logo">☕ Bean &amp; Leaf</a>
+        <nav class="nav">
+            <a href="index.html" class="nav__link nav__link--active">Главная</a>
+            <a href="menu.html" class="nav__link">Меню</a>
+            <a href="builder.html" class="nav__link">Собрать напиток</a>
+        </nav>
+    </header>
+
+    <!-- HERO с параллаксом -->
+    <section class="hero" id="hero">
+        <div class="hero__bg" id="heroBg"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">Твой идеальный кофе</h1>
+            <p class="hero__subtitle">Свежая обжарка, авторские рецепты и конструктор напитков</p>
+            <a href="builder.html" class="btn btn--primary">Собрать напиток</a>
+        </div>
+    </section>
+
+    <!-- КАРУСЕЛЬ ХИТОВ (пока пустая, наполним позже) -->
+    <section class="section">
+        <h2 class="section__title">Хиты недели</h2>
+        <div class="carousel" id="carousel">
+            <!-- Сюда JS вставит слайды из данных -->
+            <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Назад">&#10094;</button>
+            <div class="carousel__track" id="carouselTrack"></div>
+            <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Вперёд">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- О КОФЕЙНЕ -->
+    <section class="section section--alt">
+        <h2 class="section__title">Почему мы</h2>
+        <div class="features">
+            <div class="feature">
+                <span class="feature__icon">🌱</span>
+                <h3>Свежая обжарка</h3>
+                <p>Зерно обжариваем каждую неделю небольшими партиями.</p>
+            </div>
+            <div class="feature">
+                <span class="feature__icon">🧋</span>
+                <h3>Конструктор</h3>
+                <p>Собери свой напиток: зерно, молоко, размер, топпинги.</p>
+            </div>
+            <div class="feature">
+                <span class="feature__icon">⚡</span>
+                <h3>Быстро</h3>
+                <p>Готовим за 3 минуты, даже в час пик.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <p>© 2026 Bean &amp; Leaf. Учебный проект.</p>
+    </footer>
+
+    <!-- СКРИПТЫ -->
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+</body>
+</html>
